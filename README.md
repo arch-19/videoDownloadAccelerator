@@ -19,7 +19,6 @@ The documentation clearly mentions thaht x-goog-hash values are only created for
 HTTP errors are handled by the raise_for_status function of the response object. While downloading file content, the GET request is retried upto 'max_retries' times in case of Connection Errors, Timeout Errors, or if the downloaded file size does not match the size in the header.  
 
 ### Performance Benchmarks  
-I suddenly started facing a drastic increase in total download time since Feb 20th afternoon despite not making any significant changes to my code. I am unsure if it is because of my network, or some throttling by the server because I've been downloading the same file again and again over the past 2 days. I have been trying to diagnose the issue so I can give an accurate measure of performance. For now, my gist has some download times which I had noted before, but it was my intention to test out more chunk sizes and thread counts to reach an optimum value. 
 
 ### Time Taken to download file	(in seconds)	
 Number of threads	  1(Direct Request)	   8		12
